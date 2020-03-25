@@ -1,5 +1,5 @@
 $theme-primary: #F1245F;
-$theme-secondary:lighten($theme-primary, 15%);
+$theme-secondary:complement($theme-primary);
 $padding: 62px;
 $align: center;
 $animate: (transition, font-size, opacity);
