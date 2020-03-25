@@ -3,12 +3,17 @@ body {
 }
 
 header {
-    background-color: #F1245F;
-    padding: 62px;
+    $bg-color: #F1245F;
+    $padding: 62px;
+    $align: center;
+    $animate: (transition, font-size, opacity);
+    $header-sizes: ( 'h1': 142px, 'h2': 102px);
+    background-color: $bg-color;
+    padding: $padding;
     h1 {
         color: white;
-        text-align: center;
-        transition: all 1s;
+        text-align: $align;
+        transition: nth($animate, 2) 1s;
         font: {
             family: 'Stalemate', cursive;
             size: 142px;
@@ -21,7 +26,7 @@ header {
             font-size: 82px;
         }
         @media screen and (max-width:800px) {
-            font-size: 52px;
+            font-size: map-get($header-sizes, 'h1')
         }
     }
 }

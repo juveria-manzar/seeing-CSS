@@ -10,7 +10,7 @@ header {
 header h1 {
     color: white;
     text-align: center;
-    transition: all 1s;
+    transition: font-size 1s;
     font-family: 'Stalemate', cursive;
     font-size: 142px;
     font-weight: normal
@@ -28,6 +28,6 @@ header h1:hover {
 
 @media screen and (max-width: 800px) {
     header h1 {
-        font-size: 52px
+        font-size: 142px
     }
 }
