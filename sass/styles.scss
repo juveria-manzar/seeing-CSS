@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: #F1245F;
+    padding: 62px;
+    h1 {
+        color: white;
+        text-align: center;
+        transition: all 1s;
+        font: {
+            family: 'Stalemate', cursive;
+            size: 142px;
+            weight: normal;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+        @media screen and (max-width:1200px) {
+            font-size: 82px;
+        }
+        @media screen and (max-width:800px) {
+            font-size: 52px;
+        }
+    }
+}

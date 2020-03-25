@@ -1,0 +1,33 @@
+body {
+    margin: 0px
+}
+
+header {
+    background-color: #F1245F;
+    padding: 62px
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    transition: all 1s;
+    font-family: 'Stalemate', cursive;
+    font-size: 142px;
+    font-weight: normal
+}
+
+header h1:hover {
+    transform: scale(1.2)
+}
+
+@media screen and (max-width: 1200px) {
+    header h1 {
+        font-size: 82px
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header h1 {
+        font-size: 52px
+    }
+}
