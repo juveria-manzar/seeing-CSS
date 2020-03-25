@@ -1,14 +1,16 @@
+$theme-primary: #F1245F;
+$theme-secondary:darken($theme-primary, 15%);
+$padding: 62px;
+$align: center;
+$animate: (transition, font-size, opacity);
+$header-sizes: ( 'h1': 142px, 'h2': 102px);
 body {
     margin: 0px;
+    background-color: $theme-secondary;
 }
 
 header {
-    $bg-color: #F1245F;
-    $padding: 62px;
-    $align: center;
-    $animate: (transition, font-size, opacity);
-    $header-sizes: ( 'h1': 142px, 'h2': 102px);
-    background-color: $bg-color;
+    background-color: $theme-primary;
     padding: $padding;
     h1 {
         color: white;
@@ -28,5 +30,16 @@ header {
         @media screen and (max-width:800px) {
             font-size: map-get($header-sizes, 'h1')
         }
+    }
+}
+
+h2 {
+    color: $theme-primary;
+    background-color: white;
+    text-align: $align;
+    font: {
+        family: 'Stalemate', cursive;
+        size: map-get($header-sizes, 'h2');
+        weight: normal;
     }
 }
