@@ -1,0 +1,75 @@
+$theme-primary: #F1245F;
+$theme-secondary:complement($theme-primary);
+$padding: 62px;
+$align: center;
+$animate: (transition, font-size, opacity);
+$header-sizes: ( 'h1': 142px, 'h2': 102px);
+@function px-to-rem($size) {
+    $value: $size/16px;
+    @return #{$value}rem;
+}
+
+@mixin button-reset($padding, $radius) {
+    padding: $padding;
+    border-radius: $radius;
+    outline: none;
+    border: none;
+}
+
+@mixin theme-invert {
+    color: $theme-primary;
+    background-color: white;
+}
+
+button {
+    @include button-reset(15px 140px, 1000px);
+    @include theme-invert;
+    margin: 0 auto;
+    display: block;
+    font-family: 'Stalemate', cursive;
+    width: max-content;
+    font-size: 46px;
+    transition: all .4s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+html {
+    font-size: 100%;
+    @media screen and (max-width: 1400px) {
+        font-size: 86%;
+    }
+    @media screen and (max-width:1200px) {
+        font-size: 70%;
+    }
+    @media screen and (max-width:1000px) {
+        font-size: 56%;
+    }
+    @media screen and (max-width:800px) {
+        font-size: 40%;
+    }
+}
+
+body {
+    margin: 0px;
+    background-color: $theme-secondary;
+}
+
+header {
+    background-color: $theme-primary;
+    padding: $padding;
+    h1 {
+        color: white;
+        text-align: $align;
+        transition: nth($animate, 2) 1s;
+        font: {
+            family: 'Stalemate', cursive;
+            size: px-to-rem(142px);
+            weight: normal;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
